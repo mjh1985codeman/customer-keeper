@@ -43,6 +43,7 @@ customerRoutes.route("/add").post(function (req, response) {
    name: req.body.name,
    address: req.body.address,
    email: req.body.email,
+   phone: req.body.phone
  };
  db_connect.collection("customers").insertOne(myobj, function (err, res) {
    if (err) throw err;
@@ -59,6 +60,7 @@ customerRoutes.route("/update/:id").post(function (req, response) {
     name: req.body.name,
     address: req.body.address,
     email: req.body.email,  
+    phone: req.body.phone
    }, 
   }
 });
